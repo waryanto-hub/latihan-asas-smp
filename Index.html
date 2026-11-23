@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latihan ASAS Pendidikan Pancasila VII — Paket 1</title>
+<style>
+:root{--blue:#1457a6;--navy:#10345f;--gold:#e6b84a;--bg:#f3f7fc;--ink:#203047;--muted:#607086;--line:#d9e2ef;--green:#16835d;--red:#bd4141}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(120deg,#10345f,#1767b7);color:white;padding:28px 18px}
+.wrap{max-width:960px;margin:auto;padding:0 16px}
+.kicker{color:#ffe29a;font-weight:700;letter-spacing:.08em;font-size:12px}
+h1{margin:6px 0;font-size:clamp(24px,4vw,36px);line-height:1.2}
+.sub{opacity:.92;margin:8px 0 0}
+main{padding:22px 0 48px}
+.panel,.question,.stimulus{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px #16385c0a}
+.panel{padding:18px;margin-bottom:18px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+button,select{font:inherit}
+button{border:0;border-radius:10px;padding:11px 16px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer}
+button.secondary{background:#e8eff8;color:var(--navy)}button:disabled{opacity:.45;cursor:not-allowed}
+select{padding:10px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.progress{height:9px;background:#e7edf5;border-radius:99px;overflow:hidden;margin:12px 0}
+.progress>span{display:block;height:100%;width:0;background:var(--gold);transition:width .2s}
+.meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.pill{background:#edf4fc;color:var(--navy);padding:4px 9px;border-radius:99px;font-weight:700}
+.question{padding:20px;margin:16px 0}
+.qhead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px}.qhead .meta{margin-left:auto;text-align:right}
+.qnum{font-weight:800;color:var(--blue)}
+.stimulus{padding:16px;margin:12px 0;background:#fbfdff}
+.stimulus h3{margin:0 0 8px;color:var(--navy);font-size:16px}
+.stimulus p{margin:7px 0}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px;text-align:left}th{background:#edf4fc}
+.chart{display:flex;align-items:end;gap:12px;height:150px;padding:12px 8px 0;border-bottom:1px solid #9aabc0}
+.barwrap{flex:1;text-align:center;font-size:12px;color:var(--muted);height:100%;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:5px}
+.bar{width:min(48px,70%);background:linear-gradient(#4d9be5,#1457a6);border-radius:6px 6px 0 0;min-height:4px}
+.axisnote{font-size:12px;color:var(--muted);margin-top:5px}
+.options{display:grid;gap:9px;margin-top:14px}
+.option{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:11px;cursor:pointer;background:white}
+.option:hover{border-color:#80a9d8;background:#f8fbff}
+.option input{margin-top:5px;accent-color:var(--blue);transform:scale(1.1)}
+.option .letter{font-weight:800;color:var(--blue);min-width:20px}
+.feedback{padding:12px;border-radius:10px;margin-top:12px;display:none}
+.feedback.good{display:block;background:#eaf7f1;border:1px solid #b9e2ce;color:#145c42}
+.feedback.bad{display:block;background:#fff1ef;border:1px solid #f0c7c2;color:#87352f}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.small{font-size:13px;color:var(--muted)}
+.result{display:none}
+.result h2{margin-top:0}
+.resultscore{font-size:34px;color:var(--blue);font-weight:800}
+footer{padding:20px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:600px){.question{padding:15px}.stimulus{padding:12px}table{font-size:12px}th,td{padding:6px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="kicker">PAKWARONLINE.COM • LATIHAN ASAS SMP</div>
+<h1>Pendidikan Pancasila Kelas VII</h1>
+<div class="sub">Paket 1 — Bab 1: Sejarah Kelahiran Pancasila</div>
+</div></header>
+<main class="wrap">
+<section class="panel" id="intro">
+<h2 style="margin:0 0 6px">Siap berlatih?</h2>
+<p style="margin:0 0 12px">Kerjakan 20 soal berbasis bacaan, ilustrasi, tabel, grafik, dan situasi. Cermati informasi, hubungkan beberapa fakta, lalu gunakan penalaranmu untuk menentukan jawaban.</p><p class="small"><b>Acuan materi:</b> Buku Siswa Pendidikan Pancasila Kelas VII, Bab 1 — Sejarah Kelahiran Pancasila.</p>
+<div class="meta"><span class="pill">20 soal</span><span class="pill">C3–C6</span><span class="pill">Literasi & numerasi</span><span class="pill">Pilihan ganda dan pilihan kompleks</span></div>
+<div class="row" style="margin-top:15px">
+<label for="mode"><b>Mode pengerjaan:</b></label>
+<select id="mode"><option value="learn">Mode Belajar — pembahasan per soal</option><option value="exam">Mode Simulasi — hasil di akhir</option></select>
+<button id="start">Mulai latihan</button>
+</div>
+<p class="small">Soal dirancang untuk mengukur pemahaman, penalaran, interpretasi data, dan pengambilan keputusan.</p>
+</section>
+<div id="quiz" style="display:none">
+<div class="panel">
+<div class="row" style="justify-content:space-between"><b id="counter">Soal 1 dari 20</b><span class="small" id="answered">Terjawab 0</span></div>
+<div class="progress"><span id="barprogress"></span></div>
+<div class="small">Pilih jawaban dengan teliti. Pada soal pilihan kompleks, pilih semua pernyataan yang tepat.</div>
+</div>
+<div id="questionArea"></div>
+<div class="row" style="justify-content:space-between;margin-top:14px">
+<button class="secondary" id="prev">Sebelumnya</button><div class="row"><button class="secondary" id="next">Berikutnya</button><button id="finish" style="display:none">Selesaikan latihan</button></div>
+</div>
+</div>
+<section class="panel result" id="result"></section>
+</main>
+<footer>PAKWARONLINE.COM • Belajar memahami sejarah, menalar peristiwa, dan menghidupi nilai Pancasila.</footer>
+<script>
+const questions = [
+{kind:"Literasi",level:"Soal Menengah",type:"single",stimulus:`<h3>Perhatikan linimasa pembentukan BPUPK berikut.</h3><p>Cermati urutan peristiwa berikut.</p><table><tr><th>Tanggal</th><th>Peristiwa</th></tr><tr><td>1 Maret 1945</td><td>BPUPK dibentuk oleh pemerintah militer Jepang untuk wilayah Jawa dan Madura.</td></tr><tr><td>29 April 1945</td><td>BPUPK dilantik.</td></tr><tr><td>29 Mei–1 Juni 1945</td><td>Sidang pertama membahas dasar negara.</td></tr><tr><td>10–17 Juli 1945</td><td>Sidang kedua membahas rancangan UUD.</td></tr></table>`,q:"Pada linimasa pameran, tanggal pembentukan dan pelantikan BPUPK sudah ditandai. Kartu sidang pertama harus diletakkan setelah pelantikan dan sebelum sidang kedua. Rentang tanggal yang tepat adalah ....",opts:["1–8 Maret 1945","29 April–1 Mei 1945","29 Mei–1 Juni 1945","10–17 Juli 1945"],key:[2],why:"Sidang pertama BPUPK berlangsung pada 29 Mei sampai 1 Juni 1945 dan membahas dasar negara.",hint:"Bedakan tanggal pembentukan, pelantikan, sidang pertama, dan sidang kedua."},
+{kind:"Numerasi",level:"Soal Advance",type:"single",stimulus:`<h3>Cermati data komposisi keanggotaan BPUPK berikut.</h3><p>Pada awal pembentukan terdapat 60 anggota Indonesia, seorang ketua, dan seorang wakil ketua. Terdapat pula delapan orang Jepang yang berperan sebagai pengamat. Pada sidang kedua, jumlah anggota Indonesia bertambah menjadi 76 orang.</p><table><tr><th>Kelompok</th><th>Jumlah awal</th></tr><tr><td>Anggota Indonesia</td><td>60</td></tr><tr><td>Ketua dan wakil ketua</td><td>2</td></tr><tr><td>Pengamat dari Jepang</td><td>8</td></tr></table>`,q:"Panitia pameran ingin menampilkan jumlah orang yang terlibat tanpa mencampuradukkan status keanggotaan dan pengamat. Pernyataan manakah yang paling akurat untuk dicantumkan pada label pameran?",opts:["BPUPK mula-mula memiliki 60 anggota Indonesia, di luar ketua dan wakil ketua; delapan orang Jepang bertugas sebagai pengamat","BPUPK mula-mula terdiri atas 60 orang termasuk pengamat Jepang, lalu menjadi 76 orang setelah pelantikan","Jumlah 62 orang mencakup seluruh peserta termasuk delapan pengamat Jepang","Sebanyak 76 orang merupakan jumlah anggota sejak BPUPK pertama kali dibentuk"],key:[0],why:"Enam puluh orang tercatat sebagai anggota Indonesia. Ketua dan wakil ketua disebut terpisah, sedangkan delapan orang Jepang berperan sebagai pengamat.",hint:"Bedakan status anggota, pimpinan, dan pengamat sebelum menarik kesimpulan."},
+{kind:"Numerasi",level:"Soal Advance",type:"single",stimulus:`<h3>Amati grafik jumlah pembicara dalam sidang pertama berikut.</h3><p>Jumlah anggota yang berbicara pada setiap hari sidang tercatat sebagai berikut.</p><div class="chart"><div class="barwrap"><b>12</b><div class="bar" style="height:80px"></div>29 Mei</div><div class="barwrap"><b>9</b><div class="bar" style="height:60px"></div>30 Mei</div><div class="barwrap"><b>14</b><div class="bar" style="height:93px"></div>31 Mei</div><div class="barwrap"><b>6</b><div class="bar" style="height:40px"></div>1 Juni</div></div><div class="axisnote">Jumlah anggota yang menyampaikan pendapat setiap hari.</div>`,q:"Seorang pengamat menyatakan bahwa kesempatan menyampaikan pendapat tersebar merata pada keempat hari sidang. Evaluasi paling tepat terhadap pernyataan tersebut adalah ....",opts:["Tepat, karena setiap hari selalu ada anggota yang menyampaikan pendapat","Kurang tepat, karena jumlah pembicara berfluktuasi dan selisih tertinggi-terendah mencapai delapan orang","Tepat, karena total pembicara pada dua hari terakhir sama dengan dua hari pertama","Kurang tepat, karena jumlah pembicara pada 1 Juni lebih tinggi daripada 31 Mei"],key:[1],why:"Grafik menunjukkan 14 pembicara pada 31 Mei, jumlah tertinggi dibandingkan hari lainnya.",hint:"Bandingkan tinggi seluruh batang dan angka yang tertera."},
+{kind:"Literasi",level:"Soal Menengah",type:"single",stimulus:`<h3>Cermati lima prinsip yang disampaikan pada 1 Juni 1945 berikut.</h3><p>Dalam pidato 1 Juni 1945, Ir. Sukarno menyampaikan lima prinsip: kebangsaan; internasionalisme atau peri kemanusiaan; mufakat atau demokrasi; kesejahteraan sosial; dan ketuhanan.</p><p>Gagasan tersebut kemudian menjadi bagian penting dari proses perumusan dasar negara.</p>`,q:"Dalam diskusi kelas, muncul perbedaan pendapat tentang aturan pemilihan ketua kelas. Mereka kemudian menyepakati keputusan melalui musyawarah. Prinsip pidato 1 Juni yang paling sesuai dengan tindakan tersebut adalah ....",opts:["Kebangsaan sebagai identitas bersama","Mufakat sebagai cara mengambil keputusan","Kesejahteraan sosial sebagai tujuan bersama","Internasionalisme sebagai hubungan antarbangsa"],key:[1],why:"Musyawarah untuk mencapai kesepakatan mencerminkan prinsip mufakat atau demokrasi.",hint:"Cari prinsip yang berkaitan dengan cara mengambil keputusan bersama."},
+{kind:"Literasi",level:"Soal Advance",type:"single",stimulus:`<h3>Perhatikan rangkaian perumusan Pancasila berikut.</h3><table><tr><th>Tanggal</th><th>Forum / peristiwa</th><th>Hasil penting</th></tr><tr><td>1 Juni 1945</td><td>Sidang BPUPK</td><td>Pidato Sukarno tentang Pancasila</td></tr><tr><td>22 Juni 1945</td><td>Panitia Sembilan</td><td>Piagam Jakarta</td></tr><tr><td>18 Agustus 1945</td><td>Sidang PPKI</td><td>Rumusan final dalam Pembukaan UUD 1945</td></tr></table>`,q:"Jika salah satu tahap dihilangkan dari linimasa, penjelasan sejarah menjadi tidak utuh. Alasan paling kuat untuk mempertahankan ketiga tahap tersebut adalah ....",opts:["Ketiga tahap memperlihatkan gagasan awal, perumusan melalui kesepakatan, dan penetapan rumusan dasar negara","Ketiganya merupakan sidang dengan peserta dan agenda yang sama","Setiap tahap menghasilkan rumusan yang sepenuhnya identik tanpa penyesuaian","Tahap pertama dan kedua tidak berhubungan dengan penetapan pada 18 Agustus 1945"],key:[0],why:"Ketiga tahap menunjukkan perkembangan gagasan, perumusan, dan penetapan Pancasila sebagai dasar negara.",hint:"Perhatikan hubungan hasil dari tahap pertama, kedua, dan ketiga."},
+{kind:"Literasi",level:"Soal Advance",type:"single",stimulus:`<h3>Cermati susunan dan latar belakang Panitia Sembilan berikut.</h3><p>Panitia Sembilan dibentuk untuk merumuskan dasar negara dengan komposisi yang menghadirkan golongan nasionalis religius dan Islamis nasionalis. Ir. Sukarno menjadi ketua sekaligus penengah.</p><p>Anggotanya antara lain Sukarno, Mohammad Hatta, Achmad Soebardjo, Muhammad Yamin, Wachid Hasyim, Abdul Kahar Muzakir, Abikoesno Tjokrosoejoso, Agus Salim, dan A.A. Maramis.</p>`,q:"Dalam diskusi sejarah, muncul kesimpulan bahwa keberagaman pandangan dalam Panitia Sembilan justru membantu mencapai kesepakatan. Penilaian yang paling kuat untuk mendukung kesimpulan itu adalah ....",opts:["Perbedaan pandangan dibahas melalui perundingan bersama","Setiap anggota diminta meninggalkan pandangannya sendiri","Keputusan akhir ditentukan oleh ketua seorang diri","Kelompok yang lebih banyak selalu memenangkan pembahasan"],key:[0],why:"Komposisi yang mewakili beberapa golongan dan pembahasan bersama menunjukkan perbedaan dikelola melalui musyawarah.",hint:"Nilai proses pengambilan keputusan, bukan sekadar jumlah anggota."},
+{kind:"Literasi",level:"Soal Menengah",type:"single",stimulus:`<h3>Perhatikan rumusan sila pertama dalam Piagam Jakarta berikut.</h3><p>Panitia Sembilan menyepakati rancangan preambul pada 22 Juni 1945 yang dikenal sebagai Piagam Jakarta. Rumusan sila pertamanya memuat frasa “Ketuhanan dengan kewajiban menjalankan syariat Islam bagi pemeluk-pemeluknya”.</p>`,q:"Seorang siswa membandingkan rumusan sila pertama dalam Piagam Jakarta dengan rumusan final pada 18 Agustus 1945. Rumusan yang tepat untuk dicantumkan pada kolom Piagam Jakarta adalah ....",opts:["Ketuhanan Yang Maha Esa","Ketuhanan yang berkebudayaan","Ketuhanan dengan kewajiban menjalankan syariat Islam bagi pemeluk-pemeluknya","Ketuhanan berdasarkan kemanusiaan yang adil dan beradab"],key:[2],why:"Frasa tersebut merupakan rumusan sila pertama dalam Piagam Jakarta.",hint:"Cermati kutipan yang secara khusus disebut sebagai rumusan Piagam Jakarta."},
+{kind:"Literasi",level:"Soal Advance",type:"multi",stimulus:`<h3>Cermati situasi menjelang penetapan dasar negara berikut.</h3><p>Sebelum sidang PPKI pada 18 Agustus 1945, Mohammad Hatta berdiskusi dengan beberapa tokoh. Mereka menyepakati perubahan rumusan sila pertama Piagam Jakarta menjadi “Ketuhanan Yang Maha Esa” demi menjaga keutuhan bangsa.</p>`,q:"Dalam rapat kelas, dua kelompok memiliki usulan berbeda untuk aturan bersama. Tindakan yang paling mencerminkan nilai dari peristiwa tersebut adalah memilih SEMUA tindakan yang tepat.",opts:["Mendahulukan persatuan bangsa di atas kepentingan golongan","Menyelesaikan perbedaan melalui dialog dan kesepakatan","Memaksakan rumusan awal tanpa mempertimbangkan pihak lain","Mengutamakan kepentingan bersama dalam keputusan kenegaraan"],key:[0,1,3],why:"Peristiwa tersebut mencerminkan sikap rela berkorban, tidak memaksakan kehendak, dan mendahulukan kepentingan bangsa serta negara.",hint:"Pilih penilaian yang mencerminkan dialog, persatuan, dan kepentingan bersama."},
+{kind:"Numerasi",level:"Soal Advance",type:"single",stimulus:`<h3>Perhatikan linimasa peristiwa menjelang Proklamasi berikut.</h3><table><tr><th>Waktu</th><th>Peristiwa</th></tr><tr><td>14 Agustus 1945</td><td>Sukarno dan Hatta kembali ke Jakarta setelah bertemu Terauchi.</td></tr><tr><td>16 Agustus 1945, 03.00</td><td>Sukarno dan Hatta dibawa golongan muda ke Rengasdengklok.</td></tr><tr><td>16 Agustus 1945, 18.00</td><td>Achmad Soebardjo datang menjemput ke Rengasdengklok.</td></tr><tr><td>16 Agustus 1945, 24.00</td><td>Persiapan perumusan teks proklamasi di rumah Laksamana Maeda.</td></tr><tr><td>17 Agustus 1945, 10.00</td><td>Teks proklamasi dibacakan.</td></tr></table>`,q:"Tim dokumentasi harus menghitung rentang dari kedatangan Achmad Soebardjo di Rengasdengklok (16 Agustus pukul 18.00) hingga pembacaan Proklamasi (17 Agustus pukul 10.00). Jika pergantian tanggal diperhitungkan, berapa lama rentang waktunya?",opts:["Sekitar 16 jam","Sekitar 18 jam","Sekitar 20 jam","Sekitar 22 jam"],key:[0],why:"Dari pukul 18.00 pada 16 Agustus hingga pukul 24.00 terdapat 6 jam, lalu ditambah 10 jam hingga pukul 10.00. Totalnya 16 jam.",hint:"Hitung sisa waktu hingga tengah malam, lalu tambahkan waktu setelah tengah malam."},
+{kind:"Literasi",level:"Soal Advance",type:"single",stimulus:`<h3>Cermati perbedaan pandangan golongan muda dan golongan tua berikut.</h3><p>Golongan muda menghendaki proklamasi segera dilakukan tanpa melalui rapat PPKI karena khawatir kemerdekaan dianggap sebagai pemberian Jepang. Mohammad Hatta berpendapat bahwa keputusan sebaiknya melibatkan PPKI agar hak seluruh anggota dihormati. Perbedaan pandangan itu melatarbelakangi peristiwa Rengasdengklok.</p>`,q:"Seorang penulis menyebut peristiwa Rengasdengklok sebagai bukti bahwa golongan muda dan golongan tua memiliki tujuan yang saling bertentangan. Kritik paling tepat terhadap penilaian tersebut adalah ....",opts:["Penilaian itu kurang tepat karena kedua pihak menghendaki kemerdekaan, tetapi berbeda dalam strategi dan pertimbangan pelaksanaannya","Penilaian itu tepat karena golongan tua tidak menghendaki kemerdekaan Indonesia","Penilaian itu tepat karena golongan muda ingin kemerdekaan diberikan oleh Jepang","Penilaian itu kurang tepat karena tidak ada perbedaan pandangan di antara keduanya"],key:[0],why:"Keduanya menginginkan kemerdekaan, tetapi berbeda mengenai cara dan waktu pelaksanaannya.",hint:"Pisahkan tujuan bersama dari perbedaan strategi yang mereka pilih."},
+{kind:"Literasi",level:"Soal Menengah",type:"single",stimulus:`<h3>Perhatikan proses penyusunan teks Proklamasi berikut.</h3><p>Di rumah Laksamana Maeda, Sukarno, Mohammad Hatta, Achmad Soebardjo, Sukarni, dan Sayuti Melik terlibat dalam proses penyusunan naskah. Hatta mendiktekan rumusan, Sukarno menuliskannya, kemudian Sayuti Melik mengetik naskah. Naskah ditandatangani Sukarno dan Hatta atas nama bangsa Indonesia.</p>`,q:"Dalam urutan kerja penyusunan naskah, tindakan manakah yang menunjukkan peran Mohammad Hatta dan Sayuti Melik secara tepat?",opts:["Hatta mendiktekan rumusan, Sayuti Melik mengetik naskah","Sukarno mengetik naskah, Hatta menandatangani seorang diri","Achmad Soebardjo mengetik naskah, Sukarni mendiktekan rumusan","Sayuti Melik menyusun rumusan, Sukarno mengetik naskah"],key:[0],why:"Hatta mendiktekan rumusan, Sukarno menulis, dan Sayuti Melik mengetik naskah.",hint:"Bedakan peran mendiktekan, menulis tangan, mengetik, dan menandatangani."},
+{kind:"Literasi",level:"Soal Advance",type:"single",stimulus:`<h3>Amati dua tahap penyusunan naskah Proklamasi berikut.</h3><p>Naskah Proklamasi ditulis tangan oleh Sukarno, kemudian diketik oleh Sayuti Melik. Kedua naskah memiliki isi pokok yang sama, meskipun terdapat perbedaan bentuk penulisan dan beberapa penyuntingan.</p><p>Dalam pameran, dua gambar naskah diletakkan berdampingan untuk dibandingkan.</p>`,q:"Kurator ingin menjelaskan mengapa kedua naskah tetap dipamerkan sebagai bagian dari satu peristiwa. Kesimpulan yang paling dapat dipertanggungjawabkan adalah ....",opts:["Perbedaan bentuk tidak mengubah tujuan pernyataan kemerdekaan","Naskah ketikan merupakan dokumen yang tidak berkaitan","Naskah tulisan tangan hanya digunakan sebagai catatan pribadi","Kedua naskah memuat dua pernyataan kemerdekaan berbeda"],key:[0],why:"Naskah tulisan tangan dan ketikan merupakan tahapan dokumen yang sama dalam penyusunan teks Proklamasi.",hint:"Bandingkan fungsi kedua naskah dalam satu proses penyusunan."},
+{kind:"Literasi",level:"Soal Advance",type:"single",stimulus:`<h3>Cermati uraian mengenai makna Proklamasi berikut.</h3><p>Proklamasi menandai berakhirnya penjajahan di Indonesia. Bangsa Indonesia memiliki kebebasan menentukan nasib sendiri, membangun negara atas prakarsa sendiri, dan memulai pelaksanaan tata hukum nasional.</p>`,q:"Dalam sebuah artikel, penulis menyatakan bahwa Proklamasi hanya merupakan upacara pembacaan teks pada 17 Agustus 1945. Analisis yang tepat terhadap pernyataan itu adalah ....",opts:["Tepat, karena Proklamasi hanya memiliki makna seremonial","Kurang tepat, karena Proklamasi mengubah kedudukan bangsa","Tepat, karena kehidupan negara tidak berubah setelah Proklamasi","Kurang tepat, karena Proklamasi hanya mengubah nama negara"],key:[1],why:"Proklamasi memiliki makna politik dan ketatanegaraan, termasuk kebebasan menentukan nasib dan dimulainya tata hukum nasional.",hint:"Perhatikan dampak Proklamasi bagi kehidupan bangsa dan penyelenggaraan negara."},
+{kind:"Literasi",level:"Soal Advance",type:"multi",stimulus:`<h3>Perhatikan agenda dan hasil sidang PPKI berikut.</h3><p>Sehari setelah Proklamasi, PPKI bersidang. Agendanya adalah memilih Presiden dan Wakil Presiden serta menetapkan Undang-Undang Dasar. Pada sidang tersebut, rumusan Pancasila ditetapkan dalam Pembukaan UUD 1945.</p>`,q:"Pilih SEMUA pernyataan yang didukung oleh informasi pada bacaan.",opts:["Penetapan dasar negara terkait dengan Pembukaan UUD 1945","PPKI bersidang sehari setelah Proklamasi kemerdekaan","Rumusan final Pancasila tetap memakai seluruh frasa sila pertama Piagam Jakarta","Sidang PPKI membahas pembentukan dasar konstitusional negara"],key:[0,1,3],why:"Sidang berlangsung pada 18 Agustus 1945, menetapkan UUD, dan memuat rumusan Pancasila dalam Pembukaan UUD 1945; sila pertama telah disesuaikan.",hint:"Cocokkan setiap pernyataan dengan tanggal sidang, agenda, dan hasilnya."},
+{kind:"Literasi",level:"Soal Tantangan",type:"single",stimulus:`<h3>Cermati kebutuhan pengunjung dalam rancangan pameran berikut.</h3><p>OSIS akan membuat sudut pameran bertema “Proses Lahirnya Pancasila”. Pengunjung harus dapat memahami hubungan antara gagasan awal, perumusan, dan penetapan. Ruang pameran hanya menyediakan satu panel utama.</p>`,q:"Rancangan panel yang paling efektif untuk menunjukkan kesinambungan proses tersebut adalah ....",opts:["Menampilkan tiga tahap secara kronologis beserta hasil tiap tahap","Menampilkan foto tokoh tanpa tanggal dan keterangan peristiwa","Menampilkan bunyi lima sila tanpa penjelasan proses sejarah","Menampilkan satu tanggal saja sebagai seluruh proses kelahiran"],key:[0],why:"Panel kronologis yang menghubungkan 1 Juni, 22 Juni, dan 18 Agustus beserta hasil tiap tahap memperlihatkan proses secara utuh.",hint:"Pilih rancangan yang paling membantu pengunjung melihat urutan dan hubungan antarperistiwa."},
+{kind:"Literasi",level:"Soal Tantangan",type:"multi",stimulus:`<h3>Perhatikan tugas perancangan infografis berikut.</h3><p>Tim perancang kelas diminta membuat infografis digital tentang sidang BPUPK pertama. Infografis harus akurat, mudah dibaca, dan menunjukkan alasan pentingnya sidang tersebut dalam sejarah Pancasila.</p>`,q:"Pilih SEMUA unsur rancangan yang paling mendukung tujuan infografis tersebut.",opts:["Mencantumkan tanggal sidang dan agenda pembahasan dasar negara","Menyajikan lima prinsip pidato Sukarno secara terstruktur","Menggabungkan data dengan sumber rujukan yang dapat diperiksa","Menghilangkan konteks sejarah agar infografis lebih singkat"],key:[0,1,2],why:"Tanggal, agenda, isi gagasan, dan sumber yang dapat diperiksa membuat infografis informatif serta dapat dipertanggungjawabkan.",hint:"Periksa unsur akurasi, keterbacaan, dan kelengkapan konteks."},
+{kind:"Literasi",level:"Soal Advance",type:"single",stimulus:`<h3>Cermati keputusan perubahan rumusan sila pertama berikut.</h3><p>Perubahan rumusan sila pertama dari Piagam Jakarta menjadi “Ketuhanan Yang Maha Esa” dilakukan sebelum penetapan UUD 1945. Perubahan itu bertujuan menjaga keutuhan bangsa dan menunjukkan sikap rela berkorban serta tidak memaksakan kehendak.</p>`,q:"Apabila perubahan tersebut dinilai sebagai contoh kompromi kebangsaan, alasan yang paling tepat adalah ....",opts:["Keputusan mengutamakan persatuan di tengah perbedaan pandangan","Keputusan menghapus peran seluruh tokoh dalam perumusan","Keputusan dibuat tanpa mempertimbangkan kepentingan bangsa","Keputusan menunjukkan satu golongan menguasai golongan lain"],key:[0],why:"Perubahan dilakukan melalui kesepakatan untuk menjaga keutuhan bangsa dan mendahulukan kepentingan bersama.",hint:"Hubungkan perubahan rumusan dengan tujuan menjaga persatuan dan keutuhan negara."},
+{kind:"Numerasi",level:"Soal Menengah",type:"single",stimulus:`<h3>Perhatikan data persebaran wakil PPKI berikut.</h3><p>PPKI pada awalnya beranggotakan 21 orang Indonesia yang berasal dari berbagai daerah. Rinciannya: 12 wakil Jawa, 3 Sumatra, 2 Sulawesi, serta masing-masing 1 wakil Kalimantan, Sunda Kecil, Maluku, dan golongan penduduk Cina.</p><table><tr><th>Asal wakil</th><th>Jumlah</th></tr><tr><td>Jawa</td><td>12</td></tr><tr><td>Sumatra</td><td>3</td></tr><tr><td>Sulawesi</td><td>2</td></tr><tr><td>Kalimantan, Sunda Kecil, Maluku, golongan penduduk Cina</td><td>1 masing-masing</td></tr></table>`,q:"Berdasarkan data tersebut, bagaimana perbandingan jumlah wakil dari Jawa dengan jumlah wakil dari seluruh wilayah dan kelompok di luar Jawa?",opts:["4 : 3","3 : 4","12 : 21","7 : 12"],key:[0],why:"Wakil luar Jawa berjumlah 3 + 2 + 1 + 1 + 1 + 1 = 9 orang. Perbandingan Jawa dan luar Jawa adalah 12 : 9, disederhanakan menjadi 4 : 3.",hint:"Jumlahkan dahulu seluruh wakil di luar Jawa, kemudian sederhanakan perbandingannya."},
+{kind:"Numerasi",level:"Soal Advance",type:"single",stimulus:`<h3>Cermati rincian komposisi wakil PPKI berikut.</h3><p>Rincian awal PPKI adalah 12 wakil Jawa, 3 Sumatra, 2 Sulawesi, serta masing-masing 1 wakil Kalimantan, Sunda Kecil, Maluku, dan golongan penduduk Cina. Total anggota awal disebut 21 orang.</p>`,q:"Jika jumlah 21 anggota awal dijadikan dasar perhitungan, berapa persentase wakil dari luar Jawa? Pilih nilai yang paling mendekati.",opts:["33,3%","42,9%","57,1%","66,7%"],key:[1],why:"Wakil luar Jawa berjumlah 9 orang. Persentasenya adalah 9 ÷ 21 × 100% ≈ 42,9%.",hint:"Hitung jumlah wakil di luar Jawa, lalu bagi dengan total 21 dan kalikan 100%."},
+{kind:"Literasi",level:"Soal Tantangan",type:"single",stimulus:`<h3>Perhatikan kebutuhan produk belajar sejarah berikut.</h3><p>Kelas VII merancang produk akhir untuk menjelaskan sejarah kelahiran Pancasila kepada siswa kelas lain. Produk harus memuat tiga tahap utama, menunjukkan kronologi, dan menyertakan hubungan antara keputusan tokoh dan nilai kebangsaan.</p>`,q:"Produk yang paling sesuai dengan tujuan tersebut adalah ....",opts:["Peta konsep kronologis dengan peristiwa, tokoh, dan nilai","Kumpulan foto tokoh tanpa urutan dan keterangan","Daftar istilah sejarah tanpa hubungan antarperistiwa","Poster slogan kemerdekaan tanpa penjelasan proses"],key:[0],why:"Peta konsep kronologis dapat menghubungkan tahap, tokoh, peristiwa, dan nilai yang muncul dalam proses sejarah.",hint:"Pilih produk yang dapat menyatukan urutan, pelaku, dan makna."}
+];
+
+let idx=0, mode="learn", answers={}, checked={}, finished=false;
+const area=document.getElementById("questionArea");
+function render(){
+ const q=questions[idx], saved=answers[idx]||[];
+ document.getElementById("counter").textContent=`Soal ${idx+1} dari ${questions.length}`;
+ document.getElementById("answered").textContent=`Terjawab ${Object.keys(answers).length}`;
+ document.getElementById("barprogress").style.width=`${Object.keys(answers).length/questions.length*100}%`;
+ document.getElementById("prev").disabled=idx===0;
+ document.getElementById("next").style.display=idx===questions.length-1?"none":"inline-block";
+ document.getElementById("finish").style.display=idx===questions.length-1?"inline-block":"none";
+ const inputType=q.type==="multi"?"checkbox":"radio";
+ area.innerHTML=`<article class="question"><div class="qhead"><span class="qnum">SOAL ${idx+1}</span><span class="meta" style="justify-content:flex-end"><span class="pill">Soal ${q.kind}</span><span class="pill">${q.level}</span><span class="pill">${q.type==="multi"?"Pilihan kompleks":"Pilihan ganda"}</span></span></div><div class="stimulus">${q.stimulus}</div><h3 style="font-size:18px;margin:12px 0">${q.q}</h3><div class="small">${q.type==="multi"?"Pilih semua jawaban yang tepat.":"Pilih satu jawaban paling tepat."}</div><div class="options">${q.opts.map((o,i)=>`<label class="option"><input type="${inputType}" name="q${idx}" value="${i}" ${saved.includes(i)?"checked":""} ${mode==="exam"&&finished?"disabled":""}><span class="letter">${String.fromCharCode(65+i)}.</span><span>${o}</span></label>`).join("")}</div><div class="feedback" id="feedback"></div>${mode==="learn"?`<div class="controls"><button id="check">Periksa jawaban</button></div>`:""}</article>`;
+ area.querySelectorAll("input").forEach(el=>el.addEventListener("change",()=>{
+   const vals=[...area.querySelectorAll("input:checked")].map(x=>Number(x.value));
+   answers[idx]=vals;
+   document.getElementById("answered").textContent=`Terjawab ${Object.keys(answers).length}`;
+   document.getElementById("barprogress").style.width=`${Object.keys(answers).length/questions.length*100}%`;
+ }));
+ if(mode==="learn")document.getElementById("check").addEventListener("click",checkAnswer);
+ if(mode==="learn"&&checked[idx])showFeedback();
+}
+function isCorrect(i){const a=(answers[i]||[]).slice().sort().join(","),k=questions[i].key.slice().sort().join(",");return a===k}
+function showFeedback(){
+ const q=questions[idx],fb=document.getElementById("feedback");
+ if(!fb)return;
+ const ok=isCorrect(idx);
+ fb.className="feedback "+(ok?"good":"bad");
+ fb.innerHTML=`<b>${ok?"Tepat!":"Belum tepat."}</b> ${q.why}`;
+}
+function checkAnswer(){
+ if(!(answers[idx]||[]).length){alert("Pilih jawaban terlebih dahulu.");return;}
+ checked[idx]=true;showFeedback();
+}
+document.getElementById("start").onclick=()=>{
+ mode=document.getElementById("mode").value;
+ document.getElementById("intro").style.display="none";
+ document.getElementById("quiz").style.display="block";
+ render();
+};
+document.getElementById("prev").onclick=()=>{if(idx>0){idx--;render()}};
+document.getElementById("next").onclick=()=>{if(idx<questions.length-1){idx++;render()}};
+document.getElementById("finish").onclick=()=>{
+ const unanswered=questions.length-Object.keys(answers).length;
+ if(unanswered>0&&!confirm(`Masih ada ${unanswered} soal yang belum dijawab. Tetap selesaikan?`))return;
+ let score=0;questions.forEach((q,i)=>{if(isCorrect(i))score++});
+ finished=true;
+ document.getElementById("quiz").style.display="none";
+ const res=document.getElementById("result");res.style.display="block";
+ res.innerHTML=`<h2>Hasil Latihan</h2><div class="resultscore">${score} / ${questions.length}</div><p>Nilai: <b>${Math.round(score/questions.length*100)}</b></p><p>Jawaban benar: ${score} • Perlu ditinjau: ${questions.length-score}</p><p class="small">Untuk mode simulasi, pembahasan ditampilkan setelah latihan selesai. Gunakan tombol berikut untuk meninjau soal satu per satu.</p><button id="review">Tinjau pembahasan</button> <button class="secondary" id="retry">Ulangi latihan</button>`;
+ document.getElementById("review").onclick=()=>{res.style.display="none";document.getElementById("quiz").style.display="block";mode="learn";idx=0;render();};
+ document.getElementById("retry").onclick=()=>location.reload();
+};
+</script>
+</body>
+</html>
